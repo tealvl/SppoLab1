@@ -8,5 +8,6 @@ namespace SppoLab1
 {
     class LearningWork
     {
+
     }
 }
