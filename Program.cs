@@ -9,9 +9,10 @@ namespace SppoLab1
          
         }
 
-        void Plus(int a, int b) 
+        int Plus(int a, int b) 
         {
-            //return a + b + 2;
+            return a + b + 2;
+            
         }
     }
 }
