@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    class LabWork
+    class LabWork : LearningWork
     {
+
     }
 }
