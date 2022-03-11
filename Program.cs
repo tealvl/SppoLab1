@@ -6,7 +6,7 @@ namespace SppoLab1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Another test");
+         
         }
     }
 }
