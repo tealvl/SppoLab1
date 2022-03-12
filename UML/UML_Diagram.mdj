@@ -7644,7 +7644,7 @@
 											"font": "Arial;13;1",
 											"left": 269,
 											"top": 215,
-											"width": 94,
+											"width": 135,
 											"height": 13,
 											"text": "Console"
 										},
@@ -7679,7 +7679,7 @@
 									"font": "Arial;13;0",
 									"left": 264,
 									"top": 208,
-									"width": 104,
+									"width": 145,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/fr7lNAE4ITA="
@@ -7706,7 +7706,7 @@
 									"font": "Arial;13;0",
 									"left": 264,
 									"top": 233,
-									"width": 104,
+									"width": 145,
 									"height": 10
 								},
 								{
@@ -7721,7 +7721,7 @@
 									"font": "Arial;13;0",
 									"left": 264,
 									"top": 243,
-									"width": 104,
+									"width": 145,
 									"height": 10
 								},
 								{
@@ -7761,8 +7761,8 @@
 							"containerChangeable": true,
 							"left": 264,
 							"top": 208,
-							"width": 104,
-							"height": 88,
+							"width": 145,
+							"height": 89,
 							"nameCompartment": {
 								"$ref": "AAAAAAF/fr7lNAE3Efk="
 							},
@@ -7818,9 +7818,9 @@
 												"$ref": "AAAAAAF/fr8TWwN+D2g="
 											},
 											"font": "Arial;13;1",
-											"left": 277,
+											"left": 269,
 											"top": 47,
-											"width": 126,
+											"width": 134,
 											"height": 13,
 											"text": "App"
 										},
@@ -7853,9 +7853,9 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 272,
+									"left": 264,
 									"top": 40,
-									"width": 136,
+									"width": 144,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/fr8TWwN/3rg="
@@ -7880,9 +7880,9 @@
 										"$ref": "AAAAAAF/fr8TWwN7G4o="
 									},
 									"font": "Arial;13;0",
-									"left": 272,
+									"left": 264,
 									"top": 65,
-									"width": 136,
+									"width": 144,
 									"height": 10
 								},
 								{
@@ -7895,9 +7895,9 @@
 										"$ref": "AAAAAAF/fr8TWwN7G4o="
 									},
 									"font": "Arial;13;0",
-									"left": 272,
+									"left": 264,
 									"top": 75,
-									"width": 136,
+									"width": 144,
 									"height": 10
 								},
 								{
@@ -7935,10 +7935,10 @@
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 272,
+							"left": 264,
 							"top": 40,
-							"width": 136,
-							"height": 104,
+							"width": 144,
+							"height": 89,
 							"nameCompartment": {
 								"$ref": "AAAAAAF/fr8TWwN+D2g="
 							},
