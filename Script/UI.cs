@@ -32,7 +32,6 @@ namespace SppoLab1
             }
         }
 
-
         /// <summary>
         /// Защищенный ввод числа с клавиатуры
         /// </summary>
