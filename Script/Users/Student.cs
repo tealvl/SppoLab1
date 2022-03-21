@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    public class Student
+    public class Student : GetInfo
     {
         public  string name { get; private set; }
         public int age { get; private set; }
@@ -22,7 +22,7 @@ namespace SppoLab1
             myLearningPath = _myLearningPath;
         }
 
-        public override string ToString()
+        public string GetFullInfo()
         {
             return ("Студент\n" + 
                     "Имя: " + name + "\n" +
@@ -31,6 +31,10 @@ namespace SppoLab1
                     );
         }
 
+        public string GetShortInfo() 
+        {
+            return name;
+        }
     }
 
 

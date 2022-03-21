@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    class Task
+    class Task : GetInfo
     {
-        public string text { get; private set; }
+        private string text;
 
         public Task(string str) 
         {
             text = str;
+        }
+
+        public string GetFullInfo() 
+        {
+            return text;
+        }
+
+        public string GetShortInfo()
+        {
+            return text;
         }
     }
 }

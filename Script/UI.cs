@@ -12,6 +12,12 @@ namespace SppoLab1
         {
             Console.WriteLine(str);
         }
+        public static void PrintWarning(string str) 
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine(str);
+            Console.ResetColor();
+        }
 
         public static void Clear()
         {

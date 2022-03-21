@@ -6,23 +6,27 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    public class Teacher
+    public class Teacher : GetInfo
     {
         public string name { get; private set; }
         public int age { get; private set; }
         public string specialization { get; private set; }
 
-
         //private List<Course> courses;
 
 
-        public override string ToString()
+        public string GetFullInfo()
         {
             return ("Преподаватель\n" +
                     "Имя: " + name + "\n" +
                     "Возраст: " + age + "\n" +
                     "Специализация: " + specialization + "\n"
                     );
+        }
+
+        public string GetShortInfo() 
+        {
+            return name;
         }
 
     }
