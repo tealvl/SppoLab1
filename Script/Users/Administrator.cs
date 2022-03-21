@@ -10,7 +10,7 @@ namespace SppoLab1
     {
         public void SignIn() 
         {
-            UI.Print("Так так вы хотите войти как администратор");
+            UI.Print("Так так вы хотите войти как администратор, ну уж нет, пока!");
 
             App.SignIn();
         }

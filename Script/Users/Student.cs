@@ -22,6 +22,13 @@ namespace SppoLab1
             myLearningPath = _myLearningPath;
         }
 
+        public void SignIn()
+        {
+            UI.Print("Так так вы хотите войти как Студент, ну уж нет, пока!");
+
+            App.SignIn();
+        }
+
         public string GetFullInfo()
         {
             return ("Студент\n" + 

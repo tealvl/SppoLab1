@@ -14,7 +14,12 @@ namespace SppoLab1
 
         //private List<Course> courses;
 
+        public void SignIn()
+        {
+            UI.Print("Так так вы хотите войти как Преподаватель, ну уж нет, пока!");
 
+            App.SignIn();
+        }
         public string GetFullInfo()
         {
             return ("Преподаватель\n" +
