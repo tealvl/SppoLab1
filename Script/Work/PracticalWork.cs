@@ -8,6 +8,8 @@ namespace SppoLab1
 {
     class PracticalWork : Work
     {
-
+        public PracticalWork(string _name, string _workDiscription) : base(_name, _workDiscription)
+        {
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SppoLab1.Script
+namespace SppoLab1
 {
     class LabWorkCreator : IWorkCreator
     {

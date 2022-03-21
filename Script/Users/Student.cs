@@ -24,7 +24,8 @@ namespace SppoLab1
 
         public override string ToString()
         {
-            return ("Имя: " + name + "\n" +
+            return ("Студент\n" + 
+                    "Имя: " + name + "\n" +
                     "Возраст: " + age + "\n" +
                     "Группа: " + group + "\n" 
                     );

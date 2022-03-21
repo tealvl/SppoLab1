@@ -16,6 +16,7 @@ namespace SppoLab1
         {
             name = _name;
             workDiscription = _workDiscription;
+            listTask = new List<Task>();
         }
 
         public string GetFullInfo() 
