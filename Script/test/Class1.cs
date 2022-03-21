@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SppoLab1
+namespace 
 {
-    class LabWorkCreator : IWorkCreator
+    class Test
     {
+
+
     }
 }
