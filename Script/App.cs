@@ -12,11 +12,7 @@ namespace SppoLab1
         {
             UI.Print("Какое-то приветствие!");
 
-            //SignIn();
-
-            Work work = new Work();
-
-            work.Name = "";
+            SignIn();
         }
 
         static public void SignIn() 

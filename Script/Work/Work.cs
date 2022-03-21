@@ -8,10 +8,10 @@ namespace SppoLab1
 {
     class Work : GetInfo
     {
-        private string name;
-        private string workDiscription;
-        private string typeWork;
-        private List<Task> listTask;
+        protected string name;
+        protected string workDiscription;
+        protected string typeWork;
+        protected List<Task> listTask;
 
         public Work(string _name, string _workDiscription, string _typeWork) 
         {

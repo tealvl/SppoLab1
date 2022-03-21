@@ -11,6 +11,9 @@ namespace SppoLab1
         public CourseWork(string _name, string _workDiscription)
             : base(_name, _workDiscription, "Курсовая работа") { }
 
-        public CourseWork() { }
+        public CourseWork() 
+        {
+            workDiscription = "Курсовая работа";
+        }
     }
 }

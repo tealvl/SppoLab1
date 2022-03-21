@@ -11,6 +11,9 @@ namespace SppoLab1
         public PracticalWork(string _name, string _workDiscription)
             : base(_name, _workDiscription, "Практическая работа") { }
 
-        public PracticalWork() { }
+        public PracticalWork() 
+        {
+            workDiscription = "Практическая работа";
+        }
     }
 }
