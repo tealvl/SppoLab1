@@ -13,10 +13,13 @@ namespace SppoLab1
         private List<Work> works;
         //private Teacher teacher;
 
-        public Course(string _name) 
+        public Course(string _name, string _CourseDiscritption) 
         {
             name = _name;
+            CourseDiscription = _CourseDiscritption;
+            works = new List<Work>();
         }
+
 
         public string GetFullInfo()
         {
