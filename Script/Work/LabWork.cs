@@ -13,7 +13,7 @@ namespace SppoLab1
 
         public LabWork() 
         {
-            workDiscription = "Лабараторная работа";
+            typeWork = "Лабараторная работа";
             listTask = new List<Task>();
         }
     }

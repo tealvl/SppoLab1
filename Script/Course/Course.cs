@@ -21,6 +21,7 @@ namespace SppoLab1
         }
 
 
+
         public string GetFullInfo()
         {
             string str =
@@ -31,7 +32,7 @@ namespace SppoLab1
 
             for (int i = 0; i < works.Count; i++)
             {
-                str += "\t" + i.ToString() + ". " + works[i].GetShortInfo() + "\n";
+                str += "\t" + (i+1).ToString() + ". " + works[i].GetShortInfo() + "\n";
             }
 
 

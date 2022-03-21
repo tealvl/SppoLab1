@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    class Work : GetInfo
+    public class Work : GetInfo
     {
         protected string name;
         protected string workDiscription;
@@ -34,7 +34,7 @@ namespace SppoLab1
 
             for (int i = 0; i < listTask.Count; i++)
             {
-                str += "\t" + i.ToString() + ". "  + listTask[i].GetFullInfo() + "\n";
+                str += "\t" + (i+1).ToString() + ". "  + listTask[i].GetFullInfo() + "\n";
             }
 
            

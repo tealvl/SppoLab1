@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    class Task : GetInfo
+    public class Task : GetInfo
     {
         private string text;
 

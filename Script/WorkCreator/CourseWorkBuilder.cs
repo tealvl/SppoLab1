@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    class CourseWorkBuilder : IWorkBuilder
+    public class CourseWorkBuilder : WorkBuilder
     {
-
-        private CourseWork work;
-
-        CourseWorkBuilder()
+        public CourseWorkBuilder()
         {
             work = new CourseWork();
         }
@@ -19,26 +16,6 @@ namespace SppoLab1
         public void Reset()
         {
             work = new CourseWork();
-        }
-
-        public CourseWork GetResult()
-        {
-            return work;
-        }
-
-        public void AddTask(string _taskText)
-        {
-            work.AddTask(new Task(_taskText));
-        }
-
-        public void SetName(string _name)
-        {
-            work.Name = _name;
-        }
-
-        public void SetWorkDiscription(string _workDiscription)
-        {
-            work.WorkDiscription = _workDiscription;
         }
     }
 }
