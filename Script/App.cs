@@ -17,35 +17,35 @@ namespace SppoLab1
 
         static public void SignIn() 
         {
-            string str = "Выбор учетной записи:\n" +
-                "\t1. Администратор\n" +
-                "\t2. Учитель\n" +
-                "\t3. Студент\n";
+            const string chooseAccountStr = "Выбор учетной записи:\n" +
+                                            "\t1. Администратор\n" +
+                                            "\t2. Учитель\n" +
+                                            "\t3. Студент\n";
 
             List<int> countAccount = new List<int>(){ 1, 2, 3 };
-            int inputUser = UI.InputSecurityInt(countAccount, str);
+            int userInput = UI.InputSecurityInt(countAccount, chooseAccountStr);
             
-
             UI.Clear();
+           
+            switch(userInput)
+            {
+                case 1:
+                    UI.Print("Выполняется вход как администратор...");
+                    Administrator admin = new Administrator();
+                    admin.SignIn();
+                    break;
 
-            if (inputUser == 1) 
-            {
-                UI.Print("Выполняется вход как администратор...");
+                case 2:
+                    UI.Print("Выполняется вход как учитель...");
+                    break;
 
-                Administrator admin = new Administrator();
-                admin.SignIn();
-            }
-            else if (inputUser == 2) 
-            {
-                UI.Print("Выполняется вход как учитель...");
-            }
-            else if(inputUser == 3) 
-            {
-                UI.Print("Выполняется вход как студент...");
-            }
-            else 
-            {
-                UI.Print("Ошибка");
+                case 3:
+                    UI.Print("Выполняется вход как студент...");
+                    break;
+
+                default:
+                    UI.Print("Ошибка");
+                    break;
             }
         }
 
