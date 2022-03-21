@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SppoLab1.Script
 {
-    class LabWorkCreator
+    class LabWorkCreator : IWorkCreator
     {
     }
 }

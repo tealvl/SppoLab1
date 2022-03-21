@@ -8,5 +8,12 @@ namespace SppoLab1
 {
     class Task
     {
+        public string text { get; private set; }
+        // public int ID { get; private set; } 
+
+        public Task(string str) 
+        {
+            text = str;
+        }
     }
 }

@@ -26,6 +26,13 @@ namespace SppoLab1
             }
         }
 
+
+        /// <summary>
+        /// Защищенный ввод числа с клавиатуры
+        /// </summary>
+        /// <param name="listInt">Лист, в котором находятся варианты чисел, которые должен ввести пользователь</param>
+        /// <param name="message">Сообщение которое будет выводиться при неудачном вводе</param>
+        /// <returns>Число, которое находится в listInt</returns>
         public static int InputSecurityInt(IReadOnlyList<int> listInt, string message) 
         {
             int inputUser;

@@ -10,6 +10,8 @@ namespace SppoLab1
     {
         static void Main(string[] args)
         {
+            test();
+
             UI.Print("Какое-то приветствие!");
 
             string str = "Выбор учетной записи:\n" +
@@ -19,6 +21,7 @@ namespace SppoLab1
 
             List<int> countAccount = new List<int>(){ 1, 2, 3 };
             int inputUser = UI.InputSecurityInt(countAccount, str);
+            
 
             UI.Clear();
 
@@ -40,6 +43,11 @@ namespace SppoLab1
             }
         }
 
+        public static void test() 
+        {
+            Administrator.CreateStudent("Petya", 12, "20-BDM");
+            
+        }
 
     }
 }
