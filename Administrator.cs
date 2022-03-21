@@ -8,16 +8,11 @@ namespace SppoLab1
 {
     class Administrator
     {
-        public static Student CreateStudent(string name, int age, string group)
+        public void SignIn() 
         {
-            Student Petya = new Student(name, age, group, new LearnPath());
+            UI.Print("Так так вы хотите войти как администратор");
 
-            ID x = Petya.ID;
-
-            UI.Print(x.ToString());
-
-            return Petya;
+            App.SignIn();
         }
-
     }
 }

@@ -10,10 +10,13 @@ namespace SppoLab1
     {
         static void Main(string[] args)
         {
-            test();
-
             UI.Print("Какое-то приветствие!");
 
+            SignIn();
+        }
+
+        static public void SignIn() 
+        {
             string str = "Выбор учетной записи:\n" +
                 "\t1. Администратор\n" +
                 "\t2. Учитель\n" +
@@ -28,6 +31,9 @@ namespace SppoLab1
             if (inputUser == 1) 
             {
                 UI.Print("Выполняется вход как администратор...");
+
+                Administrator admin = new Administrator();
+                admin.SignIn();
             }
             else if (inputUser == 2) 
             {
@@ -43,11 +49,6 @@ namespace SppoLab1
             }
         }
 
-        public static void test() 
-        {
-            Administrator.CreateStudent("Petya", 12, "20-BDM");
-            
-        }
 
     }
 }

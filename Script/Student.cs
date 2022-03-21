@@ -11,7 +11,6 @@ namespace SppoLab1
         public  string name { get; private set; }
         public int age { get; private set; }
         public string group { get; private set; }
-        public ID ID { get; private set; }
         public LearnPath myLearningPath { get; private set; }
 
 
@@ -21,8 +20,6 @@ namespace SppoLab1
             age = _age;
             group = _group;
             myLearningPath = _myLearningPath;
-
-            ID = IDManager.CreateNewId(typeID.Student, this);
         }
 
         public override string ToString()

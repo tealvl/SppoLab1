@@ -25,7 +25,7 @@ namespace SppoLab1
 
         public static double GetFreeID(typeID typeID) 
         {
-            for (int i = 100000 * (int)typeID; i < 200000 * (int)typeID; i++) 
+            for (int i = 100000 * (int)typeID + 0; i < 100000 * (int)typeID; i++) 
             {
                 if (Contains(i) == false) 
                 {
