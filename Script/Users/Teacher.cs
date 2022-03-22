@@ -42,14 +42,14 @@ namespace SppoLab1
 
         public void StartMenu() 
         {
-            UI.Clear();
-
             string str = "Функции: " + "\n" +
                 "\t1. Курсы\n" +
                 "\t2. Работы\n" +
                 "\t3. Выйти\n";
 
             int inputUser = UI.InputSecurityRangeInt(1, 3, str);
+
+            UI.Clear();
 
             switch (inputUser)
             {
@@ -72,15 +72,14 @@ namespace SppoLab1
 
         public void WorkMenu() 
         {
-            UI.Clear();
-
             string str = "Функции: " + "\n" +
                 "\t1. Посмотреть все свои работы\n" +
                 "\t2. Создать новую работу\n" +
-                "\t3. Назад\n" +
-                "\t4. Выйти\n";
+                "\t3. Назад\n";
 
-            int inputUser = UI.InputSecurityRangeInt(1, 4, str);
+            int inputUser = UI.InputSecurityRangeInt(1, 3, str);
+
+            UI.Clear();
 
             switch (inputUser)
             {
@@ -91,11 +90,10 @@ namespace SppoLab1
                     CreateNewWork();
                     break;
                 case 3:
+                    UI.Clear();
                     StartMenu();
                     break;
-                case 4:
-                    App.SignIn();
-                    break;
+
 
                 default:
                     UI.PrintWarning("Ошибка!");
@@ -110,20 +108,19 @@ namespace SppoLab1
             {
                 UI.Print("У вас нет работ!");
                 WorkMenu();
+                return;
             }
-
-            UI.Clear();
 
             UI.Print("Ваши работы:");
 
             for (int i = 0; i < myWork.Count; i++)
             {
-                UI.Print((i + 1).ToString() +  myWork[i].GetShortInfo());  
+                UI.Print((i + 1).ToString() + "." +  myWork[i].GetShortInfo());  
             }
 
             while (true)
             {
-                string str = "Напишите число работы, которую хотите посмотреть подробнее (0 чтобы вернуться назад)";
+                string str = "Напишите номер работы, которую хотите посмотреть подробнее (0 чтобы вернуться назад)";
 
                 int inputUser = UI.InputSecurityRangeInt(0, myWork.Count, str);
 
@@ -174,7 +171,9 @@ namespace SppoLab1
 
             while (true) 
             {
-                builder.GetInfo();
+                UI.Clear();
+
+                UI.Print(builder.GetInfo());
 
                 string str1 = "1. Изменить имя" + "\n" +
                               "2. Изменить описание\n" +
@@ -205,6 +204,7 @@ namespace SppoLab1
                         break;
                     case 4:
                         myWork.Add(builder.GetResult());
+                        UI.Clear();
                         WorkMenu();
                         break;
 
@@ -224,24 +224,21 @@ namespace SppoLab1
             string str = "Функции: " + "\n" +
                 "\t1. Посмотреть все свои курсы\n" +
                 "\t2. Добавить работу в курс\n" +
-                "\t3. Назад\n" +
-                "\t4. Выйти\n";
+                "\t3. Назад\n";
 
-            int inputUser = UI.InputSecurityRangeInt(1, 4, str);
+            int inputUser = UI.InputSecurityRangeInt(1, 3, str);
 
             switch (inputUser)
             {
                 case 1:
-                    //
+                    PrintAllCourse();
                     break;
                 case 2:
-                    //
+                    AddWorkInCourse();
                     break;
                 case 3:
+                    UI.Clear();
                     StartMenu();
-                    break;
-                case 4:
-                    App.SignIn();
                     break;
 
                 default:
@@ -250,6 +247,48 @@ namespace SppoLab1
                     break;
             }
         }
+
+        public void AddWorkInCourse()
+        {
+            // -------------------------------------------
+        }
+
+        public void PrintAllCourse()
+        {
+            if (myCourses.Count <= 0)
+            {
+                UI.Print("У вас нет курсов!");
+                CourseMenu();
+                return;
+            }
+
+            UI.Clear();
+
+            UI.Print("Ваши курсы:");
+
+            for (int i = 0; i < myCourses.Count; i++)
+            {
+                UI.Print((i + 1).ToString() + myCourses[i].GetShortInfo());
+            }
+
+            while (true)
+            {
+                string str = "Напишите номер курса, который хотите посмотреть подробнее (0 чтобы вернуться назад)";
+
+                int inputUser = UI.InputSecurityRangeInt(0, myCourses.Count, str);
+
+                if (inputUser == 0)
+                {
+                    CourseMenu();
+                    return;
+                }
+                else
+                {
+                    UI.Print(myCourses[inputUser - 1].GetFullInfo());
+                }
+            }
+        }
+
 
         public string GetFullInfo()
         {

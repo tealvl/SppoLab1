@@ -70,7 +70,7 @@ namespace SppoLab1
             {
                 try
                 {
-                    SpaceLine(4);
+                    SpaceLine(1);
                     Print(message);
 
                     inputUser = int.Parse(Console.ReadLine());

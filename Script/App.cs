@@ -37,6 +37,8 @@ namespace SppoLab1
 
                 case 2:
                     UI.Print("Выполняется вход как учитель...");
+                    Teacher teacher = new Teacher("Дмитрий Николай Василий", "Какать стоя", 42);
+                    teacher.SignIn();
                     break;
 
                 case 3:
