@@ -6,22 +6,31 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    class LearningPathRequirements
+    public class LearningPathRequirements
     {
         private List<ReqirementCourse> reqiremetCourses;
         private uint minNumOptionalCourses;
+        
+        static private LearningPathRequirements singletoneLearningPathRequirements;
 
-        LearningPathRequirements() 
+        private LearningPathRequirements() 
         {
+            singletoneLearningPathRequirements = this;
             reqiremetCourses = new List<ReqirementCourse>();
             minNumOptionalCourses = 0;
         }
         
+        static public LearningPathRequirements Initialize()
+        {
+            if (singletoneLearningPathRequirements == null)
+                return new LearningPathRequirements();
+
+            return singletoneLearningPathRequirements;
+        }
+
         public void UpdateLearnPathesRequirements()
         {
             LearnPath.UpdateRequirements(minNumOptionalCourses, reqiremetCourses);
         }
-
-
     }
 }
