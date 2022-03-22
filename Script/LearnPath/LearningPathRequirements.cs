@@ -19,7 +19,26 @@ namespace SppoLab1
             reqiremetCourses = new List<ReqirementCourse>();
             minNumOptionalCourses = 0;
         }
-        
+
+        public void ChangeMinNumOptionalCourses(uint _minNumOptionalCourses)
+        {
+            minNumOptionalCourses = _minNumOptionalCourses;
+            UpdateLearnPathesRequirements();
+        }
+
+        public void SetReqiremetCourses(List<ReqirementCourse> _reqiremetCourses)
+        {
+            reqiremetCourses = _reqiremetCourses;
+            UpdateLearnPathesRequirements();
+        }
+
+        public void AddRequirementCourse(ReqirementCourse newReqirementCourse)
+        {
+            reqiremetCourses.Add(newReqirementCourse);
+            UpdateLearnPathesRequirements();
+        }
+
+
         static public LearningPathRequirements Initialize()
         {
             if (singletoneLearningPathRequirements == null)
