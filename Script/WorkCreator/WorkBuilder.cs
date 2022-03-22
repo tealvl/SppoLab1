@@ -15,12 +15,12 @@ namespace SppoLab1
             work.AddTask(new Task(_taskText));
         }
 
-        public  void SetName(string _name)
+        public void SetName(string _name)
         {
             work.Name = _name;
         }
 
-        public  void SetWorkDiscription(string _workDiscription)
+        public void SetWorkDiscription(string _workDiscription)
         {
             work.WorkDiscription = _workDiscription;
         }
@@ -28,7 +28,12 @@ namespace SppoLab1
         public Work GetResult()
         {
             return work;
-        } 
+        }
+
+        public string GetInfo() 
+        {
+            return work.GetFullInfo();
+        }
         
     }
 }

@@ -21,7 +21,11 @@ namespace SppoLab1
             listTask = new List<Task>();
         }
 
-        public Work() { }
+        public Work() 
+        {
+            name = "Название работы";
+            workDiscription = "Описание работы";
+        }
 
         public string GetFullInfo() 
         {

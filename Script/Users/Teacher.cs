@@ -34,14 +34,9 @@ namespace SppoLab1
             UI.SpaceLine(1);
             StartMenu();
 
-            
-
-
             // Создавать 3 работ
             // Посмотреть все свои курсы
             // Для каждого курса может добавить свою работу
-
-            
         }
 
 
@@ -81,7 +76,7 @@ namespace SppoLab1
 
             string str = "Функции: " + "\n" +
                 "\t1. Посмотреть все свои работы\n" +
-                "\t2. Создать новый курс\n" +
+                "\t2. Создать новую работу\n" +
                 "\t3. Назад\n" +
                 "\t4. Выйти\n";
 
@@ -93,7 +88,7 @@ namespace SppoLab1
                     PrintAllWork();
                     break;
                 case 2:
-                    //
+                    CreateNewWork();
                     break;
                 case 3:
                     StartMenu();
@@ -130,11 +125,12 @@ namespace SppoLab1
             {
                 string str = "Напишите число работы, которую хотите посмотреть подробнее (0 чтобы вернуться назад)";
 
-                int inputUser = UI.InputSecurityRangeInt(0, myWork.Count + 1, str);
+                int inputUser = UI.InputSecurityRangeInt(0, myWork.Count, str);
 
                 if (inputUser == 0)
                 {
                     WorkMenu();
+                    return;
                 }
                 else
                 {
@@ -142,6 +138,84 @@ namespace SppoLab1
                 }
             }
         }
+
+        public void CreateNewWork()
+        {
+            UI.Clear();
+
+            string str = "Добавить работу: " + "\n" +
+                "\t1. Лабараторную\n" +
+                "\t2. Практическую\n" +
+                "\t3. Курсовую\n" +
+                "\t4. Назад\n";
+
+            int inputUser = UI.InputSecurityRangeInt(1, 4, str);
+
+            switch (inputUser)
+            {
+                case 1:
+                    builder = new LabWorkBuilder();
+                    break;
+                case 2:
+                    builder = new PracticalWorkBuilder();
+                    break;
+                case 3:
+                    builder = new CourseWorkBuilder();
+                    break;
+                case 4:
+                    WorkMenu();
+                    break;
+
+                default:
+                    UI.PrintWarning("Ошибка!");
+                    App.SignIn();
+                    break;
+            }
+
+            while (true) 
+            {
+                builder.GetInfo();
+
+                string str1 = "1. Изменить имя" + "\n" +
+                              "2. Изменить описание\n" +
+                              "3. Добавить Задание\n" +
+                              "4. Сохранить";
+
+
+                int inputUser1 = UI.InputSecurityRangeInt(1, 4, str1);
+
+                string inputUserStr;
+
+                switch (inputUser1)
+                {
+                    case 1:
+                        UI.Print("Новое имя: ");
+                        inputUserStr = UI.InputeString(); 
+                        builder.SetName(inputUserStr);
+                        break;
+                    case 2:
+                        UI.Print("Новое описание: ");
+                        inputUserStr = UI.InputeString();
+                        builder.SetWorkDiscription(inputUserStr);
+                        break;
+                    case 3:
+                        UI.Print("Новое задние: ");
+                        inputUserStr = UI.InputeString();
+                        builder.AddTask(inputUserStr);
+                        break;
+                    case 4:
+                        myWork.Add(builder.GetResult());
+                        WorkMenu();
+                        break;
+
+                    default:
+                        UI.PrintWarning("Ошибка!");
+                        App.SignIn();
+                        break;
+                }
+            }
+        }
+
 
         public void CourseMenu()
         {

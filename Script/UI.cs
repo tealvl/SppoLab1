@@ -50,6 +50,12 @@ namespace SppoLab1
             return InputSecurityInt(listInt, message);
         }
 
+        public static string InputeString() 
+        {
+            string inputUser = Console.ReadLine();
+            return inputUser;
+        }
+
         /// <summary>
         /// Защищенный ввод числа с клавиатуры
         /// </summary>
