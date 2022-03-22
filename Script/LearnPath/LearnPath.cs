@@ -8,14 +8,15 @@ namespace SppoLab1
 {
     public class LearnPath : GetInfo
     {
-        private List<OptionalCourse>  optionalCourses;
-        private List<ReqirementCourse> reqiremetCourses;
-        private uint minNumOptionalCourses;
+        static private List<ReqirementCourse> reqiremetCourses;
+        static private uint minNumOptionalCourses;
+        
+        private List<OptionalCourse> optionalCourses;
+
 
         public LearnPath()
         {
             optionalCourses = new List<OptionalCourse>();
-            minNumOptionalCourses = 0;
         }
 
 
@@ -90,6 +91,12 @@ namespace SppoLab1
                 }
 
             }
+        }
+
+        static public void UpdateRequirements(uint _minNumOptionalCourses, List<ReqirementCourse> _reqiremetCourses)
+        {
+            reqiremetCourses = _reqiremetCourses;
+            minNumOptionalCourses = _minNumOptionalCourses;
         }
 
         public enum typeCourses 

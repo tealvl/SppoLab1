@@ -33,6 +33,5 @@ namespace SppoLab1
         {
             return name;
         }
-
     }
 }

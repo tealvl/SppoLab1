@@ -8,5 +8,20 @@ namespace SppoLab1
 {
     class LearningPathRequirements
     {
+        private List<ReqirementCourse> reqiremetCourses;
+        private uint minNumOptionalCourses;
+
+        LearningPathRequirements() 
+        {
+            reqiremetCourses = new List<ReqirementCourse>();
+            minNumOptionalCourses = 0;
+        }
+        
+        public void UpdateLearnPathesRequirements()
+        {
+            LearnPath.UpdateRequirements(minNumOptionalCourses, reqiremetCourses);
+        }
+
+
     }
 }
