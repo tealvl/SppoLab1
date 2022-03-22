@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    public class OptionalCourse : Course
+    public class ReqirementCourse : Course
     {
-        public OptionalCourse(string _name, string _CourseDiscritption) : base(_name, _CourseDiscritption)
+        public ReqirementCourse(string _name, string _CourseDiscritption) : base(_name, _CourseDiscritption)
         {
         }
     }

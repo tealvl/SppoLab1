@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    class Course : GetInfo
+    public class Course : GetInfo
     {
         private string name;
         private string CourseDiscription;
@@ -19,8 +19,6 @@ namespace SppoLab1
             CourseDiscription = _CourseDiscritption;
             works = new List<Work>();
         }
-
-
 
         public string GetFullInfo()
         {

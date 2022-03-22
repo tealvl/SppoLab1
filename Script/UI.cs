@@ -32,6 +32,24 @@ namespace SppoLab1
             }
         }
 
+        public static int InputSecurityRangeInt(int left, int right, string message = "") 
+        {
+            if (right <= left) 
+            {
+                UI.PrintWarning("Аргументы переданы не правильно");
+                return left;
+            }
+
+            List<int> listInt = new List<int>();
+
+            for (int i = left; i <= right; i++)
+            {
+                listInt.Add(i);
+            }
+
+            return InputSecurityInt(listInt, message);
+        }
+
         /// <summary>
         /// Защищенный ввод числа с клавиатуры
         /// </summary>

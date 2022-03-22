@@ -22,8 +22,8 @@ namespace SppoLab1
                                             "\t2. Учитель\n" +
                                             "\t3. Студент\n";
 
-            List<int> countAccount = new List<int>(){ 1, 2, 3 };
-            int userInput = UI.InputSecurityInt(countAccount, chooseAccountStr);
+
+            int userInput = UI.InputSecurityRangeInt(1, 3, chooseAccountStr);
             
             UI.Clear();
            
