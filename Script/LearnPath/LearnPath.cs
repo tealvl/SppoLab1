@@ -30,6 +30,40 @@ namespace SppoLab1
             return minNumOptionalCourses <= optionalCourses.Count;
         }
 
+        public void PrintCourses() 
+        {
+            if (GetCountCourses() <= 0)
+            {
+                UI.Print("У вас нет никаких дисциплин!");
+                return;
+            }
+
+            UI.Print(GetFullInfo());
+
+            while (true)
+            {
+                string str = "Напишите номер работы, которую хотите посмотреть подробнее (0 чтобы вернуться назад)";
+
+                int inputUser = UI.InputSecurityRangeInt(0, GetCountCourses(), str);
+
+                if (inputUser == 0)
+                {
+                    return;
+                }
+                else
+                {
+                    if (inputUser >= reqiremetCourses.Count) 
+                    {
+                        UI.Print(optionalCourses[reqiremetCourses.Count - inputUser].GetFullInfo());
+                    }
+                    else 
+                    {
+                        UI.Print(reqiremetCourses[inputUser].GetFullInfo());
+                    }
+                }
+            }
+        }
+
         public string GetInfoCourses(int count, typeCourses typeCourses) 
         {
             string str = "Что-то пошло не так";
@@ -63,7 +97,7 @@ namespace SppoLab1
 
             for (int i = 0; i < optionalCourses.Count; i++)
             {
-                str += (i + 1).ToString() + optionalCourses[i].GetShortInfo() + "\n";
+                str += (i + 1 + reqiremetCourses.Count).ToString() + optionalCourses[i].GetShortInfo() + "\n";
             }
 
             return str;
@@ -97,6 +131,11 @@ namespace SppoLab1
         {
             reqiremetCourses = _reqiremetCourses;
             minNumOptionalCourses = _minNumOptionalCourses;
+        }
+
+        public int GetCountCourses() 
+        {
+            return reqiremetCourses.Count + optionalCourses.Count;
         }
 
         public enum typeCourses 

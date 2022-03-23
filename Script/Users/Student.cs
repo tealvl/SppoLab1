@@ -24,9 +24,63 @@ namespace SppoLab1
 
         public void SignIn()
         {
-            UI.Print("Так так вы хотите войти как Студент, ну уж нет, пока!");
+            UI.Print("Учетная запись Студ.");
+            UI.Print("Добро пожаловать: " + GetShortInfo() + "!");
+            UI.SpaceLine(1);
 
-            App.SignIn();
+            if (myLearningPath.CheckNormalCountMinNumOptionalCoursesIfAllOkReturnTrueElseReturnFalse() == false) 
+            {
+                UI.PrintWarning("Внимание! Ваше количество необязательных дисциплин меньше чем число N\n" +
+                    "Настоятельно рекомендуем добавить себе новую дисциплину!!!");
+            }
+
+            StartMenu();
+
+
+            // Может просматривать свои курсы 
+            // Получать оповещение если изменились обязательные курсы или изменилось число N
+            // Добавлять новые необязательные дисциплины себе
+        }
+
+        public void StartMenu()
+        {
+            string str = "Функции: " + "\n" +
+                "\t1. Просмотреть все свои дисциплины\n" +
+                "\t2. Добавить новые необязательные дисциплины\n" +
+                "\t3. Выйти\n";
+
+            int inputUser = UI.InputSecurityRangeInt(1, 3, str);
+
+            UI.Clear();
+
+            switch (inputUser)
+            {
+                case 1:
+                    myLearningPath.PrintCourses();
+                    StartMenu();
+                    break;
+                case 2:
+                    AddNewCourses();
+                    break;
+                case 3:
+                    App.SignIn();
+                    break;
+
+                default:
+                    UI.PrintWarning("Ошибка!");
+                    App.SignIn();
+                    break;
+            }
+        }
+
+        public void AddNewCourses() 
+        {
+            // Проверка на то, есть ли еще те на которые не подписаны
+            // UI.Print("Список необязательных дисциплин на которые вы еще не подписаны:");
+            // while(true)
+            // UI.Print("Выберите какую дисциплину хотите добавить (напишите 0 чтобы вернуться назад");
+            // UI.InputSecurityRangeInt(0, len(list));
+            // myLearningPath.AddOptionalCourses();
         }
 
         public string GetFullInfo()
