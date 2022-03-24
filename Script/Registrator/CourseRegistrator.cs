@@ -6,12 +6,4 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    class CourseRegistrator
-    {
-        private List<Course> courses;
-        public int CountCourses() 
-        {
-            return courses.Count;
-        }
-    }
 }

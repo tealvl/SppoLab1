@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    class Administrator
+    static class Administrator
     {
-        public void SignIn()
+        static private AccountRegistrator accountRegistrator = AccountRegistrator.Initialize();
+        static private CourseRegistrator courseRegistrator = CourseRegistrator.Initialize(); 
+        static private LearningPathRequirements learningPathRequirements = LearningPathRequirements.Initialize();
+
+        static public void SignIn()
         {
             UI.Print("Так так вы хотите войти как администратор, ну уж нет, пока!");
 
@@ -17,7 +21,73 @@ namespace SppoLab1
             LearningPathRequirements lpr = LearningPathRequirements.Initialize();
         }
 
+        private class AccountRegistrator
+        {
+            static private AccountRegistrator singletoneAccountRegistrator;
+          
+            private List<Teacher> teachers;
+            private List<Student> students;
 
+            AccountRegistrator()
+            {
+                teachers = new List<Teacher>();
+                students = new List<Student>();
+            }
+
+            static public AccountRegistrator Initialize()
+            {
+                if (singletoneAccountRegistrator == null)
+                    return new AccountRegistrator();
+
+                return singletoneAccountRegistrator;
+            }
+
+            public void CreateTeacher()
+            {
+
+            }
+
+            public void CreateStudent()
+            {
+
+            }
+        }
+
+        private class CourseRegistrator
+        {
+            static private CourseRegistrator singletoneCourseRegistrator;
+          
+            private List<ReqirementCourse> reqirementCourses;
+            private List<OptionalCourse> optionalCourses;
+
+            CourseRegistrator()
+            {
+                reqirementCourses = new List<ReqirementCourse>();
+                optionalCourses = new List<OptionalCourse>();
+            }
+
+            public void CrateReqirementCourse()
+            {
+
+            }
+            public void CrateNewOptionalCourse()
+            {
+
+            }
+
+            static public CourseRegistrator Initialize()
+            {
+                if (singletoneCourseRegistrator == null)
+                    return new CourseRegistrator();
+
+                return singletoneCourseRegistrator;
+            }
+
+            public int CountCourses()
+            {
+                return reqirementCourses.Count + optionalCourses.Count;
+            }
+        }
 
         private class LearningPathRequirements
         {
@@ -43,7 +113,6 @@ namespace SppoLab1
                 reqiremetCourses.Add(newReqirementCourse);
                 UpdateLearnPathesRequirements();
             }
-
 
             static public LearningPathRequirements Initialize()
             {
