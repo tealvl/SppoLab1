@@ -44,6 +44,11 @@ namespace SppoLab1
 
         public void AddWork(Work _work) 
         {
+            if (works.Contains(_work))
+            {
+                UI.PrintWarning("Такая работа уже добавлена в курс!");
+                return;
+            }
             works.Add(_work);
         }
     }

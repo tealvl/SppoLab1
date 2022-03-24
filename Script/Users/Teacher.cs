@@ -246,7 +246,59 @@ namespace SppoLab1
 
         public void AddWorkInCourse()
         {
-            // -------------------------------------------
+            UI.Clear();      
+
+            if (myCourses.Count <= 0)
+            {
+                UI.Print("У вас нет курсов!");
+                CourseMenu();
+                return;
+            }
+
+            if (myWork.Count <= 0)
+            {
+                UI.Print("У вас нет курсов!");
+                CourseMenu();
+                return;
+            }
+
+            while (true) 
+            {
+                UI.Print("Все ваши работы:");
+            
+                for (int i = 0; i < myWork.Count; i++)
+                {
+                    UI.Print((i + 1).ToString() + "." + myWork[i].GetShortInfo());
+                }
+
+                int inputUser = UI.InputSecurityRangeInt(0, myWork.Count, "Выберите работу которую хотите добавить в курс (0 для выхода назд)");
+
+                if (inputUser == 0) 
+                {
+                    CourseMenu();
+                    return;
+                }
+
+                UI.Print("Ваши курсы:");
+
+                for (int i = 0; i < myCourses.Count; i++)
+                {
+                    UI.Print((i + 1).ToString() + myCourses[i].GetShortInfo());
+                }
+
+                int inputUser2 = UI.InputSecurityRangeInt(0, myWork.Count, "Выберите курс в который хотите добавить выбранную работу (0 для выхода назд)");
+
+                if (inputUser2 == 0)
+                {
+                    CourseMenu();
+                    return;
+                }
+
+                myCourses[inputUser2 - 1].AddWork(myWork[inputUser - 1]);
+
+                UI.Clear();
+            }
+
         }
 
         public void PrintAllCourse()

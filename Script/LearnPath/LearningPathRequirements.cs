@@ -38,7 +38,6 @@ namespace SppoLab1
             UpdateLearnPathesRequirements();
         }
 
-
         static public LearningPathRequirements Initialize()
         {
             if (singletoneLearningPathRequirements == null)

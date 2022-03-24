@@ -43,6 +43,8 @@ namespace SppoLab1
 
                 case 3:
                     UI.Print("Выполняется вход как студент...");
+                    Student student = new Student("Дмитрий Николай Василий", 10, "20-IDI-NAXYU", new LearnPath());
+                    student.SignIn();
                     break;
 
                 default:

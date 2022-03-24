@@ -13,16 +13,71 @@ namespace SppoLab1
         
         private List<OptionalCourse> optionalCourses;
 
+        private List<OptionalCourse> optionalCoursesNON;
+
 
         public LearnPath()
         {
             optionalCourses = new List<OptionalCourse>();
+            optionalCoursesNON = new List<OptionalCourse>();
+            minNumOptionalCourses = 0;
+            reqiremetCourses = new List<ReqirementCourse>();
+        }
+
+        public void AddNewCourses()
+        {
+            if (optionalCoursesNON.Count <= optionalCourses.Count) 
+            {
+                UI.PrintWarning("У вас нет новых курсов на которые можно подписаться!");
+                return;
+            }
+
+            UI.Print("Список необязательных дисциплин на которые вы еще не подписаны:");
+
+            List<OptionalCourse> optionalCoursesFree = new List<OptionalCourse>();
+
+            for (int i = 0; i < optionalCoursesNON.Count; i++)
+            {
+                if (optionalCourses.Contains(optionalCoursesNON[i]) == false) 
+                {
+                    optionalCoursesFree.Add(optionalCoursesNON[i]);
+                }
+            }
+
+            string str = "";
+
+            for (int i = 0; i < optionalCoursesFree.Count; i++)
+            {
+                str += (i + 1).ToString() + optionalCoursesFree[i].GetShortInfo() + "\n";
+            }
+
+            while (true)
+            {
+                UI.Print("Выберите какую дисциплину хотите добавить (напишите 0 чтобы вернуться назад");
+                int inputUser = UI.InputSecurityRangeInt(0, optionalCoursesFree.Count);
+
+                if (inputUser == 0) 
+                {
+                    return;
+                }
+
+                AddOptionalCourses(optionalCoursesFree[inputUser - 1]);
+            }
+
+
         }
 
 
-        public void AddOptionalCourses() 
+
+        public void AddOptionalCourses(OptionalCourse _optionalCourse) 
         {
-            //------------------------------------------------------------
+            if (optionalCourses.Contains(_optionalCourse)) 
+            {
+                UI.PrintWarning("Такой дополнительный курс уже ест!");
+                return;
+            }
+
+            optionalCourses.Add(_optionalCourse);
         }
 
         public bool CheckNormalCountMinNumOptionalCoursesIfAllOkReturnTrueElseReturnFalse() 
@@ -32,6 +87,8 @@ namespace SppoLab1
 
         public void PrintCourses() 
         {
+            UI.Clear();
+
             if (GetCountCourses() <= 0)
             {
                 UI.Print("У вас нет никаких дисциплин!");

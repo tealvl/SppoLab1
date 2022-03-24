@@ -60,7 +60,8 @@ namespace SppoLab1
                     StartMenu();
                     break;
                 case 2:
-                    AddNewCourses();
+                    myLearningPath.PrintCourses();
+                    StartMenu();
                     break;
                 case 3:
                     App.SignIn();
@@ -73,15 +74,6 @@ namespace SppoLab1
             }
         }
 
-        public void AddNewCourses() 
-        {
-            // Проверка на то, есть ли еще те на которые не подписаны
-            // UI.Print("Список необязательных дисциплин на которые вы еще не подписаны:");
-            // while(true)
-            // UI.Print("Выберите какую дисциплину хотите добавить (напишите 0 чтобы вернуться назад");
-            // UI.InputSecurityRangeInt(0, len(list));
-            // myLearningPath.AddOptionalCourses();
-        }
 
         public string GetFullInfo()
         {
