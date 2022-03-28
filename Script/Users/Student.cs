@@ -28,7 +28,7 @@ namespace SppoLab1
             UI.Print("Добро пожаловать: " + GetShortInfo() + "!");
             UI.SpaceLine(1);
 
-            if (myLearningPath.CheckNormalCountMinNumOptionalCoursesIfAllOkReturnTrueElseReturnFalse() == false) 
+            if (myLearningPath.EnoughOptionalCourses() == false) 
             {
                 UI.PrintWarning("Внимание! Ваше количество необязательных дисциплин меньше чем число N\n" +
                     "Настоятельно рекомендуем добавить себе новую дисциплину!!!");

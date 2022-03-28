@@ -2692,35 +2692,6 @@
 										"$ref": "AAAAAAF/fe6AZT9vBnc="
 									},
 									"edgePosition": 1
-								}
-							],
-							"font": "Arial;13;0",
-							"head": {
-								"$ref": "AAAAAAF/eXYHGVsX3AI="
-							},
-							"tail": {
-								"$ref": "AAAAAAF/fe6AJD8Kqdo="
-							},
-							"lineStyle": 1,
-							"points": "855:762;807:794",
-							"showVisibility": true,
-							"nameLabel": {
-								"$ref": "AAAAAAF/fe6AZT9wRIg="
-							},
-							"stereotypeLabel": {
-								"$ref": "AAAAAAF/fe6AZT9xgDo="
-							},
-							"propertyLabel": {
-								"$ref": "AAAAAAF/fe6AZT9yUVY="
-							}
-						},
-						{
-							"_type": "UMLClassView",
-							"_id": "AAAAAAF/fe6MYz+8GWU=",
-							"_parent": {
-								"$ref": "AAAAAAF/eUvw90SD8q0="
-							},
-							"model": {
 <<<<<<< HEAD
 =======
 								},
@@ -3689,8 +3660,6 @@
 									}
 								},
 								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAF/foLRJ3Nm9ig=",
 									"_type": "EdgeLabelView",
 									"_id": "AAAAAAF/foLRJ3Nm9ig=",
 									"_parent": {

@@ -51,6 +51,8 @@ namespace SppoLab1
                 str += (i + 1).ToString() + optionalCoursesFree[i].GetShortInfo() + "\n";
             }
 
+            UI.Print(str);
+
             while (true)
             {
                 UI.Print("Выберите какую дисциплину хотите добавить (напишите 0 чтобы вернуться назад");
@@ -73,14 +75,14 @@ namespace SppoLab1
         {
             if (optionalCourses.Contains(_optionalCourse)) 
             {
-                UI.PrintWarning("Такой дополнительный курс уже ест!");
+                UI.PrintWarning("Такой дополнительный курс уже есть!");
                 return;
             }
 
             optionalCourses.Add(_optionalCourse);
         }
 
-        public bool CheckNormalCountMinNumOptionalCoursesIfAllOkReturnTrueElseReturnFalse() 
+        public bool EnoughOptionalCourses() 
         {
             return minNumOptionalCourses <= optionalCourses.Count;
         }
