@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    public class CourseBuilder: AbstractCourseBuilder
+    class CourseBuilder: ICourseBuilder
+
     {
+        private Course course;
+
         CourseBuilder()
         {
             course = new Course();
