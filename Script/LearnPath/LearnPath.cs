@@ -8,6 +8,46 @@ namespace SppoLab1
 {
     public class LearnPath : GetInfo
     {
+        //private List<CourseTest> myCourses;
+
+        private List<ICourse> myCourses;
+
+        public void CreateLearnPath() 
+        {
+            for (int i = 0; i < myCourses.Count; i++)
+            {
+                myCourses[i].SelectCourse();
+            }
+
+        }
+
+        public string GetFullInfo()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetShortInfo()
+        {
+            throw new NotImplementedException();
+            //string str = 
+            for (int i = 0; i < myCourses.Count; i++)
+            {
+                myCourses[i].SelectCourse();
+            }
+        }
+
+        public bool EnoughOptionalCourses() 
+        {
+            return false;
+        }
+
+        public void PrintCourses() 
+        {
+
+        }
+
+
+        /*
         static private List<ReqirementCourse> reqiremetCourses;
         static private uint minNumOptionalCourses;
         
@@ -197,5 +237,6 @@ namespace SppoLab1
             Optional,
             Reqirement
         }
+        */
     }
 }

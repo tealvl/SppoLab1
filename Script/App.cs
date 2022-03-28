@@ -12,7 +12,8 @@ namespace SppoLab1
         {
             UI.Print("Какое-то приветствие!");
 
-            SignIn();
+            UI.Print("\u2721");
+            //SignIn();
         }
 
         static public void SignIn() 

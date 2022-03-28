@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    public class Course : GetInfo
+    public class Course : CourseTest
     {
         private string name;
-        private string CourseDiscription;
+        private string сourseDiscription;
         private List<Work> works;
-        //private Teacher teacher;
 
-        public Course(string _name, string _CourseDiscritption) 
+        public Course(string _name, string _CourseDiscritption)
         {
             name = _name;
-            CourseDiscription = _CourseDiscritption;
+            сourseDiscription = _CourseDiscritption;
             works = new List<Work>();
         }
 
@@ -24,25 +23,25 @@ namespace SppoLab1
         {
             string str =
                 "Дисциплина:" + "'" + name + "'" + "\n" +
-                "Описание: " + CourseDiscription + "\n" +
+                "Описание: " + сourseDiscription + "\n" +
                 "Работы:" + "\n";
 
 
             for (int i = 0; i < works.Count; i++)
             {
-                str += "\t" + (i+1).ToString() + ". " + works[i].GetShortInfo() + "\n";
+                str += "\t" + (i + 1).ToString() + ". " + works[i].GetShortInfo() + "\n";
             }
 
 
             return str;
         }
 
-        public string GetShortInfo() 
+        public string GetShortInfo()
         {
             return name;
         }
 
-        public void AddWork(Work _work) 
+        public void AddWork(Work _work)
         {
             if (works.Contains(_work))
             {
@@ -52,13 +51,47 @@ namespace SppoLab1
             works.Add(_work);
         }
 
+        public Course SelectCourse()
+        {
+            return this;
+        }
 
 
+        public string Name
+        {
+            get { return name; }
 
+            set
+            {
+                if (value.Length <= 2 || value.Length >= 200)
+                {
+                    UI.PrintWarning("Имя курса должно быть от 2 до 200 символов!");
+                }
+                else
+                {
+                    name = value;
+                }
 
+            }
+        }
 
+        public string CourseDiscription
+        {
+            get { return сourseDiscription; }
 
-        private List<Work> work;
+            set
+            {
+                if (value.Length <= 10 || value.Length >= 1000)
+                {
+                    UI.PrintWarning("Описание курса должно быть от 10 до 1 000 символов!");
+                }
+                else
+                {
+                    сourseDiscription = value;
+                }
+            }
+        }
+
 
         /*
         
