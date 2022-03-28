@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    class CourseBranchBuilder: AbstractCourseBuilder
+    public class CourseBranchBuilder: AbstractCourseBuilder
     {
         CourseBranchBuilder()
         {

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SppoLab1.Script.Course.CourseCreator
+namespace SppoLab1
 {
-    class CourseBuilder: AbstractCourseBuilder
+    public class CourseBuilder: AbstractCourseBuilder
     {
         CourseBuilder()
         {

@@ -8,10 +8,35 @@ namespace SppoLab1
 {
     class UI
     {
-        public static void Print(string str) 
+        public static void Print(string str, bool NewLine = true) 
         {
-            Console.WriteLine(str);
+            if (NewLine == true) 
+            {
+                Console.WriteLine(str);
+            }
+            else 
+            {
+                Console.Write(str);
+            }
+            
         }
+        public static void PrintWithColor(string str, ConsoleColor consoleColor,  bool NewLine = true)
+        {
+            Console.ForegroundColor = consoleColor;
+
+            if (NewLine == true)
+            {
+                Console.WriteLine(str);
+            }
+            else
+            {
+                Console.Write(str);
+            }
+
+            Console.ResetColor();
+
+        }
+
         public static void PrintWarning(string str) 
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;
