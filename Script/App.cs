@@ -31,8 +31,9 @@ namespace SppoLab1
             {
                 case 1:
                     UI.Print("Выполняется вход как администратор...");
-                    Administrator admin = new Administrator();
-                    admin.SignIn();
+                    //Administrator admin = new Administrator();
+                    //admin.SignIn();
+                    Administrator.SignIn();
                     break;
 
                 case 2:
