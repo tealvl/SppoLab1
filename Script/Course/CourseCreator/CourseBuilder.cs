@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    public class CourseBuilder: ICourseBuilder
+    public class CourseBuilder//: ICourseBuilder
     {
         private Course course;
 
-        CourseBuilder()
+        public CourseBuilder()
         {
             course = new Course();
         }
@@ -20,7 +20,7 @@ namespace SppoLab1
             course.Name = _name;
         }
 
-        public void SetWorkDiscription(string _workDiscription)
+        public void SetCourseDiscription(string _workDiscription)
         {
             course.CourseDiscription = _workDiscription;
         }
@@ -34,5 +34,11 @@ namespace SppoLab1
         {
             course = new Course();
         }
+
+        public Course GetResult() 
+        {
+            return course;
+        }
+
     }
 }

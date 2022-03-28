@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SppoLab1
-{
+{/*
     public class Teacher : GetInfo
     {
         public string name { get; private set; }
@@ -353,4 +353,5 @@ namespace SppoLab1
         }
 
     }
+    */
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    public class Course : CourseTest
+    public class Course : CourseTest, GetInfo, ICourse
     {
         private string name;
         private string сourseDiscription;
@@ -16,6 +16,13 @@ namespace SppoLab1
         {
             name = _name;
             сourseDiscription = _CourseDiscritption;
+            works = new List<Work>();
+        }
+
+        public Course() 
+        {
+            name = "";
+            сourseDiscription = "";
             works = new List<Work>();
         }
 

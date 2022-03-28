@@ -28,12 +28,14 @@ namespace SppoLab1
 
         public string GetShortInfo()
         {
-            throw new NotImplementedException();
-            //string str = 
+            string str = "";
+
             for (int i = 0; i < myCourses.Count; i++)
             {
-                myCourses[i].SelectCourse();
+                str += ((GetInfo)myCourses[i]).GetShortInfo() +  "\n";
             }
+
+            return str;
         }
 
         public bool EnoughOptionalCourses() 
@@ -46,6 +48,10 @@ namespace SppoLab1
 
         }
 
+        public LearnPath(List<ICourse> _myCourses) 
+        {
+            myCourses = _myCourses;
+        }
 
         /*
         static private List<ReqirementCourse> reqiremetCourses;

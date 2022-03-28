@@ -10,51 +10,9 @@ namespace SppoLab1
     {
         static void Main(string[] args)
         {
-            UI.Print("Какое-то приветствие!");
-
-            UI.Print("\u2721");
-            //SignIn();
+            Test test = new Test();
+            test.Run();
         }
-
-        static public void SignIn() 
-        {
-            const string chooseAccountStr = "Выбор учетной записи:\n" +
-                                            "\t1. Администратор\n" +
-                                            "\t2. Учитель\n" +
-                                            "\t3. Студент\n";
-
-
-            int userInput = UI.InputSecurityRangeInt(1, 3, chooseAccountStr);
-            
-            UI.Clear();
-           
-            switch(userInput)
-            {
-                case 1:
-                    UI.Print("Выполняется вход как администратор...");
-                    //Administrator admin = new Administrator();
-                    //admin.SignIn();
-                    Administrator.SignIn();
-                    break;
-
-                case 2:
-                    UI.Print("Выполняется вход как учитель...");
-                    Teacher teacher = new Teacher("Дмитрий Николай Василий", "Какать стоя", 42);
-                    teacher.SignIn();
-                    break;
-
-                case 3:
-                    UI.Print("Выполняется вход как студент...");
-                    Student student = new Student("Дмитрий Николай Василий", 10, "20-IDI-NAXYU", new LearnPath());
-                    student.SignIn();
-                    break;
-
-                default:
-                    UI.Print("Ошибка");
-                    break;
-            }
-        }
-
 
     }
 }

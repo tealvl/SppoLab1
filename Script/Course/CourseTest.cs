@@ -6,21 +6,8 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    public class CourseTest : GetInfo, ICourse
+    public class CourseTest 
     {
-        public string GetFullInfo()
-        {
-            throw new NotImplementedException();
-        }
 
-        public string GetShortInfo()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Course SelectCourse()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

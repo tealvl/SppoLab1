@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    public class BranchCourse : CourseTest 
+    public class BranchCourse : CourseTest, GetInfo, ICourse
     {
         private List<Course> coursesInBranch = new List<Course>();
         private Course selectCourse = null;
@@ -15,6 +15,11 @@ namespace SppoLab1
         public BranchCourse(List<Course> _coursesInBranch) 
         {
             coursesInBranch = _coursesInBranch;
+        }
+
+        public BranchCourse() 
+        {
+            coursesInBranch = new List<Course>();
         }
 
         public string GetFullInfo()
@@ -50,20 +55,29 @@ namespace SppoLab1
 
         public string GetShortInfo()
         {
+
+
             if (selectCourse == null) 
             {
                 string str = "";
 
                 for (int i = 0; i < coursesInBranch.Count; i++)
                 {
-                    //str += (i + 1).ToString() + ". " + coursesInBranch[i].GetShortInfo();
-                    str += coursesInBranch[i].GetShortInfo() + "\n";
+                    //str += (i + 1).ToString() + ". " + coursesInBranch[i].GetShortInfo() + "\t";
+                    str += coursesInBranch[i].GetShortInfo();
+
+                    if (i != coursesInBranch.Count - 1) 
+                    {
+                        str += "   ИЛИ   ";
+                    }
                 }
 
                 return str;
             }
             else 
             {
+                return selectCourse.GetShortInfo();
+
                 for (int i = 0; i < coursesInBranch.Count; i++)
                 {
                     // Костыльно - да. Надо ESC-последовательности как в С++, но тут я не знаю как они работают 
@@ -83,6 +97,7 @@ namespace SppoLab1
 
         public Course SelectCourse()
         {
+
             if (selectCourse == null) 
             {
                 if (coursesInBranch.Count == 1)
@@ -103,7 +118,7 @@ namespace SppoLab1
             }
         }
 
-        public void AddCouse(Course course) 
+        public void AddCource(Course course) 
         {
             coursesInBranch.Add(course);
         }

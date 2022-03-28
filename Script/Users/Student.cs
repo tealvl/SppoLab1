@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
+ 
     public class Student : GetInfo
     {
         public  string name { get; private set; }
@@ -21,59 +22,6 @@ namespace SppoLab1
             group = _group;
             myLearningPath = _myLearningPath;
         }
-
-        public void SignIn()
-        {
-            UI.Print("Учетная запись Студ.");
-            UI.Print("Добро пожаловать: " + GetShortInfo() + "!");
-            UI.SpaceLine(1);
-
-            if (myLearningPath.EnoughOptionalCourses() == false) 
-            {
-                UI.PrintWarning("Внимание! Ваше количество необязательных дисциплин меньше чем число N\n" +
-                    "Настоятельно рекомендуем добавить себе новую дисциплину!!!");
-            }
-
-            StartMenu();
-
-
-            // Может просматривать свои курсы 
-            // Получать оповещение если изменились обязательные курсы или изменилось число N
-            // Добавлять новые необязательные дисциплины себе
-        }
-
-        public void StartMenu()
-        {
-            string str = "Функции: " + "\n" +
-                "\t1. Просмотреть все свои дисциплины\n" +
-                "\t2. Добавить новые необязательные дисциплины\n" +
-                "\t3. Выйти\n";
-
-            int inputUser = UI.InputSecurityRangeInt(1, 3, str);
-
-            UI.Clear();
-
-            switch (inputUser)
-            {
-                case 1:
-                    myLearningPath.PrintCourses();
-                    StartMenu();
-                    break;
-                case 2:
-                    myLearningPath.PrintCourses();
-                    StartMenu();
-                    break;
-                case 3:
-                    App.SignIn();
-                    break;
-
-                default:
-                    UI.PrintWarning("Ошибка!");
-                    App.SignIn();
-                    break;
-            }
-        }
-
 
         public string GetFullInfo()
         {

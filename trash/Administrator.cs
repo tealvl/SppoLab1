@@ -9,6 +9,7 @@ namespace SppoLab1
 {
     static class Administrator
     {
+        /*
         static private AccountRegistrator accountRegistrator = AccountRegistrator.Initialize();
         static private CourseRegistrator courseRegistrator = CourseRegistrator.Initialize(); 
         static private LearningPathRequirements learningPathRequirements = LearningPathRequirements.Initialize();
@@ -358,5 +359,6 @@ namespace SppoLab1
                 LearnPath.UpdateRequirements(minNumOptionalCourses, reqiremetCourses);
             }
         }
+        */
     }
 }
