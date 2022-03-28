@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    public class WorkBuilder
+    public abstract class WorkBuilder
     {
         protected Work work;
 
