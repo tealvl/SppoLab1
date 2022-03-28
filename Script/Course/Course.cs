@@ -51,5 +51,49 @@ namespace SppoLab1
             }
             works.Add(_work);
         }
+
+
+
+
+
+
+
+        private List<Work> work;
+
+        /*
+        
+        interface ICourseState:
+            public Course Select();
+
+        ------------------------------------------
+
+        class BranchCourse: ICourseState
+            private List<Course> Course;
+
+            public Course Select()
+            {
+                for i in range...
+            }
+
+        -----------------------------------------
+
+        class Course: ICourseState
+            private List<Work> work;
+
+            public Course Select()
+            {
+                return this;
+            }
+
+        ----------------------------------------
+
+
+
+        */
+
+
+
+
+
     }
 }
