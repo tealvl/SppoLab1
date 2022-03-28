@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    class CourseBranchBuilder: AbstractCourseBuilder
+    class CourseBranchBuilder: ICourseBuilder
     {
+        private CourseBranchBuilder course;
+
+        public ICourse GetResult()
+        {
+            return course;
+        }
+      
         CourseBranchBuilder()
         {
             course = new CourseBranch();
@@ -21,6 +28,11 @@ namespace SppoLab1
         public void AddCourse(Course _someCourse)
         {
             course.AddCource(_someCourse);
+        }
+
+        public string GetInfo()
+        {
+            return course.GetFullInfo();
         }
     }
 }

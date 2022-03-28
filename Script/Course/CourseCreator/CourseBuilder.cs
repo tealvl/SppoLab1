@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace SppoLab1.Script.Course.CourseCreator
 {
-    class CourseBuilder: AbstractCourseBuilder
+    class CourseBuilder: ICourseBuilder
     {
+        private Course course;
+
         CourseBuilder()
         {
             course = new Course();

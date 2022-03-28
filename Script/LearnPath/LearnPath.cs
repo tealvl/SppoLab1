@@ -15,7 +15,6 @@ namespace SppoLab1
 
         private List<OptionalCourse> optionalCoursesNON;
 
-
         public LearnPath()
         {
             optionalCourses = new List<OptionalCourse>();
@@ -65,11 +64,7 @@ namespace SppoLab1
 
                 AddOptionalCourses(optionalCoursesFree[inputUser - 1]);
             }
-
-
         }
-
-
 
         public void AddOptionalCourses(OptionalCourse _optionalCourse) 
         {
