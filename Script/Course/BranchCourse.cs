@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SppoLab1
 {
@@ -10,7 +7,6 @@ namespace SppoLab1
     {
         private List<Course> coursesInBranch = new List<Course>();
         private Course selectCourse = null;
-
 
         public BranchCourse(List<Course> _coursesInBranch) 
         {
@@ -68,7 +64,7 @@ namespace SppoLab1
 
                     if (i != coursesInBranch.Count - 1) 
                     {
-                        str += "   ИЛИ   ";
+                        str += "\x1b[38;5;196m   ИЛИ   \x1b[0m";
                     }
                 }
 
@@ -87,7 +83,7 @@ namespace SppoLab1
                     }
                     else 
                     {
-                        UI.Print(coursesInBranch[i].GetShortInfo() + "\t", false);
+                        UI.Print(coursesInBranch[i].GetShortInfo() + "\t",  false);
                     }
                 }
             }
@@ -113,8 +109,7 @@ namespace SppoLab1
             }
             else 
             {
-                UI.Print("Вы хотите выбрать другую ветку? А так пока нельзя...");
-                return new Course("","");
+                return selectCourse; 
             }
         }
 

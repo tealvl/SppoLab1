@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SppoLab1
 {
+    
     class UI
     {
-        public static void Print(string str, bool NewLine = true) 
+        public static void Print(string str,  bool NewLine = true) 
         {
             if (NewLine == true) 
             {
@@ -18,7 +17,11 @@ namespace SppoLab1
             {
                 Console.Write(str);
             }
-            
+        }
+
+        public static void Ready() 
+        {
+            Console.ReadKey();
         }
         public static void PrintWithColor(string str, ConsoleColor consoleColor,  bool NewLine = true)
         {
@@ -121,4 +124,5 @@ namespace SppoLab1
         }
 
     }
+
 }

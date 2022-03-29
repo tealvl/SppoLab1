@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SppoLab1
 {
@@ -10,13 +7,35 @@ namespace SppoLab1
     {
         public void Run() 
         {
+            LearnPath learnPath = GetLearnPath();
+            Student student = GetStudent(learnPath);
+
+            UI.Print("Дерево обучения:");
+            UI.Print(learnPath.GetShortInfo());
+
+            UI.SpaceLine(5);
+
+            learnPath.CreateLearnPath();
+            UI.Clear();
+
+            UI.Print("Это ваш путь обучения:");
+            learnPath.PrintDetails();
+        }
+
+        public Student GetStudent(LearnPath learnPath) 
+        {
+            return new Student("Игорек", 12, "9Б", learnPath);
+        }
+
+        public LearnPath GetLearnPath() 
+        {
             List<ICourse> _myCourses = new List<ICourse>();
 
             CourseBuilder courseBuilder = new CourseBuilder();
 
-            LabWorkBuilder       labWorkBuilder       = new LabWorkBuilder();
+            LabWorkBuilder labWorkBuilder = new LabWorkBuilder();
             PracticalWorkBuilder practicalWorkBuilder = new PracticalWorkBuilder();
-            CourseWorkBuilder    courseWorkBuilder    = new CourseWorkBuilder();
+            CourseWorkBuilder courseWorkBuilder = new CourseWorkBuilder();
 
             courseBuilder.SetName("Курс по игре на треугольники");
             courseBuilder.SetCourseDiscription("Этот курс направлен на изучение и освоение навыков игры на музыкальном инструменте - треугольник.");
@@ -85,6 +104,8 @@ namespace SppoLab1
             Work coursew1 = courseWorkBuilder.GetResult();
             courseWorkBuilder.Reset();
 
+            courseBuilder.AddWork(coursew1);
+
             Course course3 = courseBuilder.GetResult();
             courseBuilder.Reset();
 
@@ -102,6 +123,8 @@ namespace SppoLab1
 
             Work coursew2 = courseWorkBuilder.GetResult();
             courseWorkBuilder.Reset();
+
+            courseBuilder.AddWork(coursew2);
 
             Course course4 = courseBuilder.GetResult();
             courseBuilder.Reset();
@@ -130,10 +153,7 @@ namespace SppoLab1
 
             LearnPath learnPath = new LearnPath(_myCourses);
 
-            Student student = new Student("Игорек", 12, "9Б", learnPath);
-            UI.Print(learnPath.GetShortInfo());
-            learnPath.CreateLearnPath();
-            UI.Print(learnPath.GetShortInfo());
+            return learnPath;
         }
     }
 }

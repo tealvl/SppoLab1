@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace SppoLab1
 {
@@ -33,12 +29,10 @@ namespace SppoLab1
                 "Описание: " + сourseDiscription + "\n" +
                 "Работы:" + "\n";
 
-
             for (int i = 0; i < works.Count; i++)
             {
                 str += "\t" + (i + 1).ToString() + ". " + works[i].GetShortInfo() + "\n";
             }
-
 
             return str;
         }
@@ -63,6 +57,28 @@ namespace SppoLab1
             return this;
         }
 
+        public void PrintDetails() 
+        {
+            string str = "Введите номер работы которую хотите просмотреть подробнее (0 чтобы вернуться назад)";
+            while (true)
+            {
+                UI.Clear();
+                UI.Print(GetFullInfo());
+
+                int inputUser = UI.InputSecurityRangeInt(0, works.Count, str);
+
+                if (inputUser == 0)
+                {
+                    return;
+                }
+
+                UI.Print(works[inputUser - 1].GetFullInfo());
+
+                UI.Print("(нажмите любую кнопку чтобы вернуться назад)");
+
+                UI.Ready();
+            }
+        }
 
         public string Name
         {
@@ -98,42 +114,6 @@ namespace SppoLab1
                 }
             }
         }
-
-
-        /*
-        
-        interface ICourseState:
-            public Course Select();
-
-        ------------------------------------------
-
-        class BranchCourse: ICourseState
-            private List<Course> Course;
-
-            public Course Select()
-            {
-                for i in range...
-            }
-
-        -----------------------------------------
-
-        class Course: ICourseState
-            private List<Work> work;
-
-            public Course Select()
-            {
-                return this;
-            }
-
-        ----------------------------------------
-
-
-
-        */
-
-
-
-
 
     }
 }
