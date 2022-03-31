@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Script\test\" />
+    <Compile Remove="Script\test\**" />
+    <EmbeddedResource Remove="Script\test\**" />
+    <None Remove="Script\test\**" />
   </ItemGroup>
 
 </Project>

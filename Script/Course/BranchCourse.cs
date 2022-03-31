@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SppoLab1
 {
-    public class BranchCourse : CourseTest, GetInfo, ICourse
+    public class BranchCourse : GetInfo, ICourse
     {
         private List<Course> coursesInBranch = new List<Course>();
         private Course selectCourse = null;

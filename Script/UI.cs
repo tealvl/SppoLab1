@@ -34,7 +34,6 @@ namespace SppoLab1
             }
 
             Console.ResetColor();
-
         }
 
         public static void PrintWarning(string str) 
