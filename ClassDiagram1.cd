@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SppoLab1.LabWork">
+    <Position X="11.25" Y="5" Width="1.5" />
+    <Members>
+      <Method Name="LabWork" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Script\Work\LabWork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SppoLab1.Work">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <Members>
+      <Method Name="GetFullInfo" Hidden="true" />
+      <Method Name="GetShortInfo" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIAAECAAABAAAAAAQAAAAAQAAAAEIAAAACAAAAAAAAA=</HashCode>
+      <FileName>Script\Work\Work.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SppoLab1.CourseWork">
+    <Position X="9" Y="5" Width="1.5" />
+    <Members>
+      <Method Name="CourseWork" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Script\Work\CourseWork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SppoLab1.PracticalWork">
+    <Position X="13.5" Y="5" Width="1.5" />
+    <Members>
+      <Method Name="PracticalWork" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Script\Work\PracticalWork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SppoLab1.BranchCourse">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <Members>
+      <Method Name="GetFullInfo" Hidden="true" />
+      <Method Name="GetShortInfo" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIABIAAAQAAAAAAAAAAAAAAAAAAAAAAgACAAAAAAAAA=</HashCode>
+      <FileName>Script\Course\BranchCourse.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SppoLab1.Course">
+    <Position X="2.5" Y="2.25" Width="1.5" />
+    <Members>
+      <Property Name="CourseDiscription" Hidden="true" />
+      <Method Name="GetFullInfo" Hidden="true" />
+      <Method Name="GetShortInfo" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BIAAAAAAAAAAAAAAAAAAAAQAAAAEAAAgACQABBAAAAA=</HashCode>
+      <FileName>Script\Course\Course.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SppoLab1.WorkBuilder">
+    <Position X="11.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAIAAAAEAAAAAAAAAAAAAAAAEAAAEAAQAAAAAA=</HashCode>
+      <FileName>Script\WorkCreator\WorkBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SppoLab1.CourseWorkBuilder">
+    <Position X="9" Y="10.25" Width="1.5" />
+    <Members>
+      <Method Name="CourseWorkBuilder" Hidden="true" />
+      <Method Name="Reset" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Script\WorkCreator\CourseWorkBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SppoLab1.LabWorkBuilder">
+    <Position X="11.25" Y="10.25" Width="1.5" />
+    <Members>
+      <Method Name="LabWorkBuilder" Hidden="true" />
+      <Method Name="Reset" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Script\WorkCreator\LabWorkBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SppoLab1.PracticalWorkBuilder">
+    <Position X="13.5" Y="10.25" Width="1.5" />
+    <Members>
+      <Method Name="PracticalWorkBuilder" Hidden="true" />
+      <Method Name="Reset" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Script\WorkCreator\PracticalWorkBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SppoLab1.Task">
+    <Position X="14.25" Y="1" Width="1.5" />
+    <Members>
+      <Method Name="GetFullInfo" Hidden="true" />
+      <Method Name="GetShortInfo" Hidden="true" />
+      <Method Name="Task" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAAAAA=</HashCode>
+      <FileName>Script\Work\Task.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SppoLab1.CourseBuilder">
+    <Position X="4.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAhAEAAAAAAAAAAAAAAAAAAEAAQAAAAAA=</HashCode>
+      <FileName>Script\Course\CourseCreator\CourseBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SppoLab1.CourseBranchBuilder">
+    <Position X="6.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAhAAAAAAABAAAAAAAAEAAAEAAAAAAAAA=</HashCode>
+      <FileName>Script\Course\CourseCreator\CourseBranchBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="SppoLab1.ICourse">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Script\Course\ICourse.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
