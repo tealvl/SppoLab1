@@ -53,16 +53,15 @@ namespace SppoLab1
         {
 
 
-            if (selectCourse == null) 
+            if (selectCourse == null)
             {
                 string str = "";
 
                 for (int i = 0; i < coursesInBranch.Count; i++)
                 {
-                    //str += (i + 1).ToString() + ". " + coursesInBranch[i].GetShortInfo() + "\t";
                     str += coursesInBranch[i].GetShortInfo();
 
-                    if (i != coursesInBranch.Count - 1) 
+                    if (i != coursesInBranch.Count - 1)
                     {
                         str += "\x1b[38;5;196m   ИЛИ   \x1b[0m";
                     }
@@ -70,25 +69,11 @@ namespace SppoLab1
 
                 return str;
             }
-            else 
+            else
             {
                 return selectCourse.GetShortInfo();
-
-                for (int i = 0; i < coursesInBranch.Count; i++)
-                {
-                    // Костыльно - да. Надо ESC-последовательности как в С++, но тут я не знаю как они работают 
-                    if (coursesInBranch[i] == selectCourse) 
-                    {
-                        UI.PrintWithColor(coursesInBranch[i].GetShortInfo() + "\t", ConsoleColor.Green, false);
-                    }
-                    else 
-                    {
-                        UI.Print(coursesInBranch[i].GetShortInfo() + "\t",  false);
-                    }
-                }
             }
 
-            return "";
         }
 
         public Course SelectCourse()
